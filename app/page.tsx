@@ -67,7 +67,7 @@ export default function Page() {
           background: "linear-gradient(135deg, #2E5E38 0%, #5E9E65 60%, #C5A050 100%)",
         }}
       >
-        <div className="max-w-lg mx-auto px-4 pt-4 pb-1">
+        <div className="max-w-5xl mx-auto px-4 pt-4 pb-1">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-lg">
               💍
@@ -99,7 +99,7 @@ export default function Page() {
       </div>
 
       {/* 콘텐츠 */}
-      <div className="max-w-lg mx-auto px-4 py-4">
+      <div className="max-w-5xl mx-auto px-4 py-4">
         {tab === "summary" && (
           <SummaryTab guests={guests} expenses={expenses} settings={settings} />
         )}
