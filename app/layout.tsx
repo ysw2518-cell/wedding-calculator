@@ -1,31 +1,29 @@
 import type { Metadata, Viewport } from "next";
-import { Jua } from "next/font/google";
+import { Nanum_Myeongjo } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const jua = Jua({
-  weight: "400",
+const font = Nanum_Myeongjo({
+  weight: ["400", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "분유 세팅 가이드",
-  description: "분유 제조기 세팅 번호를 빠르게 찾아보세요. 베이비브레짜, 브라비 등 주요 제조기와 국산·수입 분유 세팅 정보를 제공합니다.",
-  manifest: "/manifest.json",
-  appleWebApp: { capable: true, statusBarStyle: "default", title: "분유 세팅" },
+  title: "축의계산기",
+  description: "결혼식 축의금 정산 도우미. 하객 명단, 지출 관리, 양가 정산까지.",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#fce7f3",
+  themeColor: "#2E5E38",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body className={jua.className}>
+      <body className={font.className}>
         {children}
         <Script src="//t1.kakaocdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
       </body>
